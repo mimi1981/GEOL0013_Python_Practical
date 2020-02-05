@@ -125,6 +125,11 @@ p.joinpath('Data/<FILENAME>')
 
 Also, ensure that %matplotlib inline is not written as % matplotlib inline
 
+5. In order to download ERA5 data yourselves you will need to set up an account on ECMWF as described in 3. 
+
+Alternatively you can download sample data and test some example scripts from a web interface here
+
+https://cds.climate.copernicus.eu/toolbox-editor/examples/02-plot-map
 
 
 ## Authors
