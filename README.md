@@ -12,7 +12,7 @@ ERA5_Maps/Maps_fields_GEOL0013_total_precipitation.ipynb will read and plot aver
 
 ERA5_Maps/EOFs_fields_GEOL0013_T2m.ipynb will perform EOF analysis of the 2m temperature
 
-Data are contained in 
+Sample data are contained in 
 
 ERA5_Data/
 
@@ -23,6 +23,14 @@ Before proceeding with downloading this directory you need to set up your enviro
 https://www.youtube.com/watch?v=YQWAiUhZJX8
 
 https://www.youtube.com/watch?v=mwgnYW3RnhI
+
+In order to download ERA5 data yourselves you will need to set up an account on ECMWF first and then follow the procedure described here 
+
+https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5#HowtodownloadERA5-3-DownloadERA5datathroughtheCDSAPI
+
+Alternatively you can download sample data and test some example scripts from a web interface here
+
+https://cds.climate.copernicus.eu/toolbox-editor/examples/02-plot-map
 
 
 ### Installing
