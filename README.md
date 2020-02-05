@@ -59,17 +59,29 @@ import cdsapi
 c = cdsapi.Client()
 
 c.retrieve(
+
     'reanalysis-era5-single-levels-monthly-means',
-    {      
+    
+    {
+    
         'area'          : [60, -10, 50, 2], # North, West, South, East. Default: global
+        
         'grid'          : [1.0, 1.0], # Latitude/longitude grid: east-west (longitude) and north-south resolution (latitude). Default: 0.25 x 0.25
+        
         'product_type':'monthly_averaged_reanalysis',
+        
         'variable':'2m_temperature',
+        
         'year':'2003',
+        
         'month':'06',
+        
         'time':'00:00',
+        
         'format':'netcdf'
+        
     },
+    
     'download_small.nc')
 
 You will first need to agree to the terms and conditions. If you get an error with cdsapirc, ensure the file is in your $HOME directory, that it is formatted as plain text, that it does not have a file extension, and that you copied the url and key *exactly*. 
