@@ -25,23 +25,35 @@ https://github.com/royalosyin/Python-Practical-Application-on-Climate-Variabilit
 1.	Install anaconda (https://www.anaconda.com/distribution/#download-section) and select python 3.7
 
 2.	To set up your environment type the following lines *exactly* into terminal/anaconda prompt:
+
 conda create -n basemap_test python=3.6 basemap=1.2.0 proj4=5.2.0 scipy jupyter netCDF4=1.3.1 seaborn=0.9.0 pandas=0.23.4
+
 Press Y to proceed 
+
 conda activate basemap_test
+
 conda install -c conda-forge cdsapi
+
 Press Y to proceed
 
 3.	In your home directory; create the cdsapirc file. 
+
 Follow the instructions on https://cds.climate.copernicus.eu/api-how-to
+
 You will need to create an account to generate a CDS API key. If you are not sure what your $HOME directory is, type $HOME into terminal/cmd. Ensure the url and key is copied *exactly* as it is, and that there is no file extension on the cdsapirc file you create.
+
 If you are using mac, open TextEdit and paste the url and key, then click Format then Make Plain Text. Save the file as cdsapirc in $HOME, and in Finder click ‘Get Info’ and ensure there is no .txt extension, if there is then remove it. Open the cdsapirc file in TextEdit again and rename to .cdsapirc the file will now probably disappear from finder, this is normal.
+
 If you are using windows, open Notepad and paste the url and key. Save this in your $HOME directory as .cdsapirc with no file extension.
 
 4.	To test your installation, type jupyter notebook into your terminal/anaconda prompt. Create a new notebook, and in the first cell paste the following
 
 from mpl_toolkits.basemap import Basemap, shiftgrid, interp, addcyclic
+
 from netCDF4 import Dataset
+
 from scipy import signal
+
 import cdsapi
 
 c = cdsapi.Client()
@@ -61,18 +73,25 @@ c.retrieve(
     'download_small.nc')
 
 You will first need to agree to the terms and conditions. If you get an error with cdsapirc, ensure the file is in your $HOME directory, that it is formatted as plain text, that it does not have a file extension, and that you copied the url and key *exactly*. 
+
 If this runs without error then you have successfully configured your environment. 
 
 At any time, to enter your environment, type 
+
 conda activate basemap_test
+
 To exit your environment, type 
+
 conda deactivate
 
 
 
 For use of the exercises you must install dependencies (inside your environment) 
+
 conda install -c conda-forge spectrum
+
 conda install -c conda-forge eofs
+
 conda install -c ulmo urllib3
 
 
