@@ -32,6 +32,9 @@ Alternatively you can download sample data and test some example scripts from a 
 
 https://cds.climate.copernicus.eu/toolbox-editor/examples/02-plot-map
 
+To use these python scipt on your machine you can download the cdstoolbox following the link below
+https://pypi.org/project/cdstoolbox-remote/
+
 
 ### Installing
 
