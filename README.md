@@ -1,3 +1,27 @@
+# GEOL0013_Python_Practical
+
+This is a directory with a collection of routines for the practical of week 4 of GEOL0013 Principles of Climate
+
+## Getting Started
+
+All the jupyter notebooks can be run on your laptop 
+
+ERA5_Maps/Maps_fields_GEOL0013_T2m.ipynb will read and plot averages and trends of the 2m surface temperature 
+
+ERA5_Maps/Maps_fields_GEOL0013_total_precipitation.ipynb will read and plot averages and trends of the total surface precipitation 
+
+ERA5_Maps/EOFs_fields_GEOL0013_T2m.ipynb will perform EOF analysis of the 2m temperature
+
+Sample data are contained in 
+
+ERA5_Data/
+
+More extensive examples are provided in the following link
+
+https://github.com/royalosyin/Python-Practical-Application-on-Climate-Variability-Studies
+
+### Prerequisites
+
 1.	Install anaconda (https://www.anaconda.com/distribution/#download-section) and select python 3.7
 
 2.	To set up your environment type the following lines *exactly* into terminal/anaconda prompt:
@@ -63,3 +87,15 @@ to
 p.joinpath('Data/<FILENAME>')
 
 Also, ensure that %matplotlib inline is not written as % matplotlib inline
+
+
+
+## Authors
+
+* **Michel Tsamados** 
+* **William Gregory**
+* **Thomas Johnson**
+
+## Acknowledgments
+
+The series of python practicals were developped by Chonghua Yin https://github.com/royalosyin
