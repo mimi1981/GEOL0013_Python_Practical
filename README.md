@@ -2,9 +2,10 @@
 
 This is a directory with a collection of routines for the practical of week 4 of GEOL0013 Principles of Climate. 
 
-We will be looking at reanalysis from two of the main centres: 
+We will be looking at reanalysis data from two of the main centres: 
 
 NCEP (US): https://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.derived.surfaceflux.html
+
 ERA5 (Europe): https://cds.climate.copernicus.eu/#!/home
 
 Good-to-Know: What is the difference between Analysis, Forecast and Reanalysis?
