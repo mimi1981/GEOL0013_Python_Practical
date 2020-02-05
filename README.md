@@ -96,13 +96,19 @@ conda install -c ulmo urllib3
 
 
 You may also need to change the way files are loaded. If this is the case, insert the following in the fist cell of the notebook
+
 import os
+
 from pathlib import Path
+
 p = Path(os.getcwd())
 
 Next, change the filename from 
+
 'data/<FILENAME>’
+
 to
+
 p.joinpath('Data/<FILENAME>')
 
 Also, ensure that %matplotlib inline is not written as % matplotlib inline
