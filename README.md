@@ -7,7 +7,9 @@ This is a directory with a collection of routines for the practical of week 4 of
 All these jupyter notebook can be run on your laptop 
 
 ERA5_Maps/Maps_fields_GEOL0013_T2m.ipynb will read and plot averages and trends of the 2m surface temperature 
+
 ERA5_Maps/Maps_fields_GEOL0013_total_precipitation.ipynb will read and plot averages and trends of the total surface precipitation 
+
 ERA5_Maps/EOFs_fields_GEOL0013_T2m.ipynb will perform EOF analysis of the 2m temperature
 
 Data are contained in 
