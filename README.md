@@ -145,6 +145,18 @@ Alternatively you can download sample data and test some example scripts from a 
 
 https://cds.climate.copernicus.eu/toolbox-editor/examples/02-plot-map
 
+### Your turn
+
+Using the techniques shown in the examples of this practical create your own simple jupyter notebook focusing on a region of your choice. You are encouraged to use one of the two reanalysis products used in this practical (ERA5 or NCEP). Illustrate some of the following: 
+
+- Average values 
+- Trends and significance 
+- Climatology, seasonal cycle
+- Compare with local and global values
+- Compare with local and global CO2 levels 
+- Apply higher level statistics (spectral analysis)
+- Attempt a forecast 
+
 
 ## Authors
 
