@@ -156,7 +156,11 @@ Using the techniques shown in the examples of this practical create your own sim
 - Compare with local and global CO2 levels 
 - Apply higher level statistics (spectral analysis)
 - Attempt a forecast 
+- Compare results between different reanalysis
+- Provide some brief text to put your results in context 
+- Provide references for your region of interest
 
+Please upload your jupyter notebook on Moodle for Thursday 27/2. You will be marked (10% of module) on clarity of presentation, relevant and concise literature, and of course your code should be running without issues.  
 
 ## Authors
 
