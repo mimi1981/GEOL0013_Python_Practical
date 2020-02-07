@@ -162,6 +162,98 @@ Using the techniques shown in the examples of this practical create your own sim
 
 Please upload your jupyter notebook on Moodle for Thursday 27/2. You will be marked (10% of module) on clarity of presentation, relevant and concise literature, and of course your code should be running without issues.  
 
+
+Help to get you going using examples (ex01, ex02…) provided in:
+https://github.com/royalosyin/Python-Practical-Application-on-Climate-Variability-Studies
+
+1)	Download and read data
+- ex01 shows how to # Read SST NetCDF data, Subsample and Save regional array 
+- Maps_fields_GEOL0013_T2m shows how to download NCEP data 
+
+Hint: to find out what are the variable names in a netcdf file that you have downloaded use code in ex01: 
+
+fh     = Dataset(ncfile, mode='r') # file handle, open in read only mode
+print(fh)
+fh.close() # close the file
+
+Hint: NCEP2 data can be downloaded from 
+https://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis2.gaussian.html
+ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis.derived/surface_gauss/
+
+i.e 2m air temperature is ftp://ftp.cdc.noaa.gov/Datasets/ncep.reanalysis.derived/surface_gauss/air.2m.mon.mean.nc
+
+Hint: ERA5 data can be downloaded from:
+https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview
+example CDS API:
+import cdsapi
+
+c = cdsapi.Client()
+
+c.retrieve(
+    'reanalysis-era5-single-levels-monthly-means',
+    {
+        'product_type': 'monthly_averaged_reanalysis',
+        'variable': [
+            '10m_u_component_of_wind', '10m_v_component_of_wind', '2m_temperature',
+            'sea_surface_temperature', 'snowfall', 'total_precipitation',
+        ],
+        'year': [
+            '1979', '1980', '1981',
+            '1982', '1983', '1984',
+            '1985', '1986', '1987',
+            '1988', '1989', '1990',
+            '1991', '1992', '1993',
+            '1994', '1995', '1996',
+            '1997', '1998', '1999',
+            '2000', '2001', '2002',
+            '2003', '2004', '2005',
+            '2006', '2007', '2008',
+            '2009', '2010', '2011',
+            '2012', '2013', '2014',
+            '2015', '2016', '2017',
+            '2018', '2019',
+        ],
+        'month': [
+            '01', '02', '03',
+            '04', '05', '06',
+            '07', '08', '09',
+            '10', '11', '12',
+        ],
+        'time': '00:00',
+        'format': 'netcdf',
+    },
+    'download.nc')
+
+
+Hint: CMIP5 if you want to go further and look at the future conditions of your regions you can download CMIP5 data from:
+https://cds.climate.copernicus.eu/cdsapp#!/dataset/projections-cmip5-monthly-single-levels?tab=overview
+example CDS API:
+import cdsapi
+
+c = cdsapi.Client()
+
+c.retrieve(
+    'projections-cmip5-monthly-single-levels',
+    {
+        'ensemble_member': 'r3i1p1',
+        'format': 'zip',
+        'variable': '2m_temperature',
+        'experiment': 'rcp_8_5',
+        'model': 'hadgem2_cc',
+        'period': [
+            '200512-203011', '203012-205511', '205512-208011',
+            '208012-209912',
+        ],
+    },
+    'download.zip')
+You might need a recent file extractor (unzip did not work for me and I used Keka https://www.keka.io/en/). 
+
+2)	Select a region of interest and produce time series 
+- ex02 shows how to # Read SST data, Create and Save regional time series
+
+Hint: change the input file in ex02, the number of years (currently 30), the lat-lon boundaries to produce a timeseries of your field and region of interest. For example for the eastern Mediterranean sector for the whole 1970 to 2019 period of ERA5 I get: 
+ 
+
 ## Authors
 
 * **Michel Tsamados** 
